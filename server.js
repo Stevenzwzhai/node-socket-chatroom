@@ -95,7 +95,7 @@ const server = net.createServer((socket) => {
 })
 server.listen({
     port:4433,
-    host:'172.20.131.140'
+    host:'127.0.0.1'//要想别人访问到，要写服务启动所在机子的ip地址，默认localhost
 }, () => {
     console.log('server bound')
 })
