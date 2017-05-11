@@ -16,7 +16,7 @@ rl.question('What is your name >', (name) => {
     if(name){
         const client = net.connect({
             port:4433,
-            host:'172.20.131.140'
+            host:'127.0.0.1'//要别人访问到，需要些自己服务启动所在的IP地址（Ipv4）
         }, (data) => {
             console.log('welcome to chatroom 4433!');
             
