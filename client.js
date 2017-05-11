@@ -22,8 +22,6 @@ rl.question('What is your name >', (name) => {
             
             client.on('data', (data) => {
                 //这里data是一个buffer;
-                let buf = new Buffer('');
-                readline.clearLine(buf,-1);
                 let receive = JSON.parse(data.toString().trim());
                 process.stdout.write(`\n${receive.name}>${receive.message}\n`);
                 rl.prompt();
