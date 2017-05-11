@@ -23,7 +23,7 @@ const DealInfo = {
     client (receive, socket) {
         for(let key in this.clients){
             if(key == receive.to){
-                socket.write(JSON.stringify(receive));
+                 this.clients[key].write(JSON.stringify(receive));
             }
         }
     }
